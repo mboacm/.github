@@ -1,0 +1,54 @@
+name: Bug
+description: Signaler un comportement incorrect
+labels: ["bug"]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module du CDC
+      description: Par exemple M10 (annonces), M32 (frais de service)
+    validations:
+      required: true
+  - type: dropdown
+    id: composant
+    attributes:
+      label: Composant
+      options:
+        - App Mboa
+        - App Mboa Pro
+        - App Mboa Gestion
+        - Dashboard Admin
+        - API
+        - Autre
+    validations:
+      required: true
+  - type: dropdown
+    id: environnement
+    attributes:
+      label: Environnement
+      options:
+        - Local
+        - Staging
+        - Production
+    validations:
+      required: true
+  - type: textarea
+    id: etapes
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Résultat attendu et résultat observé
+    validations:
+      required: true
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Contexte
+      description: Version de l'application, appareil, extrait de journal. Aucune donnée personnelle réelle.

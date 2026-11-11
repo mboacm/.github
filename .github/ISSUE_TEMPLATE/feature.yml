@@ -1,0 +1,43 @@
+name: Fonctionnalité ou tâche
+description: Proposer une fonctionnalité ou une tâche de développement
+labels: ["fonctionnalité"]
+body:
+  - type: input
+    id: module
+    attributes:
+      label: Module du CDC et tâche du tableur de suivi
+      description: Par exemple M10, tâche M10-T03
+    validations:
+      required: true
+  - type: dropdown
+    id: jalon
+    attributes:
+      label: Jalon
+      options:
+        - MVP-1
+        - MVP-2
+        - V1
+    validations:
+      required: true
+  - type: input
+    id: sprint
+    attributes:
+      label: Sprint prévu (Doc 15)
+      placeholder: S8
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Ce que la fonctionnalité doit permettre, du point de vue de l'utilisateur.
+    validations:
+      required: true
+  - type: textarea
+    id: regles
+    attributes:
+      label: Règles métier et critères d'acceptation
+      description: Règles RM-Mxx-yy et critères CA-Mxx-yy du CDC concernés.
+  - type: textarea
+    id: dependances
+    attributes:
+      label: Dépendances et points ⚪ / ⚖️
+      description: Décisions à prendre, avis du juriste, autres modules.
